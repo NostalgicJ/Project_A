@@ -21,6 +21,8 @@ from utils.converter import AttnLabelConverter
 from models.ops import ModelContainer
 from utils.create_inference_lmdb import create_initial_lmdb
 from utils.delete_file import delete_files_in_directory
+from Change_Result import process_inference_file
+
 
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -208,7 +210,7 @@ if __name__ == '__main__':
     parser.add_argument('--inference_result', type=str, default ='./inference/inference_result', help='path to inference result folder')
     
     parser.add_argument('--batch_size', type=int, default=3, help='input batch size')
-    parser.add_argument('--workers', type=int, default=4, help='number of data loading workers')
+    parser.add_argument('--workers', type=int, default=0, help='number of data loading workers')
     
     # --- cfg.py / demo.py의 필수 옵션들 ---
     parser.add_argument('--exp_name', type=str, default='Inference', help='Where to store logs and models')
@@ -330,6 +332,7 @@ if __name__ == '__main__':
         f.write("ImageName\tPrediction\tConfidence\n")
         for name, pred_text, score in zip(file_names, preds, scores):
             f.write(f"{name}\t{pred_text}\t{score:.4f}\n")
-    
+     process_inference_file('./inference/inference_result/inference_results.txt', './inference/inference_result/inference_results.txt')
+     
     print(f"\nSuccess: Inference results saved to '{output_filename}'")
   
