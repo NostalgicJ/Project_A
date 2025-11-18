@@ -332,7 +332,7 @@ if __name__ == '__main__':
         f.write("ImageName\tPrediction\tConfidence\n")
         for name, pred_text, score in zip(file_names, preds, scores):
             f.write(f"{name}\t{pred_text}\t{score:.4f}\n")
-     process_inference_file('./inference/inference_result/inference_results.txt', './inference/inference_result/inference_results.txt')
+    process_inference_file('./inference/inference_result/inference_results.txt', './inference/inference_result/inference_results.txt')
      
     print(f"\nSuccess: Inference results saved to '{output_filename}'")
   
