@@ -1,3 +1,4 @@
 *.pt filter=lfs diff=lfs merge=lfs -text
 *.h5 filter=lfs diff=lfs merge=lfs -text
 Project_A/* filter=lfs diff=lfs merge=lfs -text
+SkinAI/ocr_model/utils/gt_cropped_for_train_NEW.txt filter=lfs diff=lfs merge=lfs -text
