@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./SkinAI/server/src/shared"
+    ]
+}

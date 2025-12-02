@@ -1,0 +1,12 @@
+--------------------------------------------------------------------------------
+dataset_root: ./data_set
+opt.select_data: ['MJ']
+opt.batch_ratio: ['1']
+--------------------------------------------------------------------------------
+dataset_root:    ./data_set	 dataset: MJ
+sub-directory:	/MJ	 num samples: 356
+num total samples of MJ: 356 x 1.0 (total_data_usage_ratio) = 356
+num samples of MJ per batch: 19 x 1.0 (batch_ratio) = 19
+--------------------------------------------------------------------------------
+Total_batch_size: 19 = 19
+--------------------------------------------------------------------------------
